@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int x, y;
+	int x = 0, y = 1;
 
 	while (x < 100)
 	{
@@ -21,6 +21,7 @@ int main(void)
 			putchar(' ');
 			putchar(y / 10 + '0');
 			putchar(y % 10 + '0');
+
 			if (x != 98 || y != 99)
 			{
 				putchar(',');
