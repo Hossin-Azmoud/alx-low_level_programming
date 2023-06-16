@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * function that prints numbers from 0 to 9
+ * function that prints base16 numbers {0-f} 
  * Return: 0 Always (SUCCESS)
  *
  */
