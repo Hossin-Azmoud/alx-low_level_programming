@@ -1,15 +1,13 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
  * main - Entry point
- * function a program that prints all possible
- * combinations of single-digit numbers.
+ * function a program that prints _putchar 
  * Return: 0 Always (SUCCESS)
  *
  */
 
 int main(void)
 {
-	printf("_putchar\n");
+	_putchar();
 	return (0);
 }
