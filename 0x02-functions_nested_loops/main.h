@@ -1,5 +1,8 @@
 #ifndef MAIN__H
 #define MAIN__H
+#define BOUND 98
+#define MAX   10
+#define EOB   '\0'
 
 #include <stdio.h>
 #include <unistd.h>

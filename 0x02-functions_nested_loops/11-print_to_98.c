@@ -1,7 +1,4 @@
 #include "main.h"
-#define BOUND 98
-#define MAX   10
-#define EOB   '\0'
 
 /**
  * convert_int_to_ascii - converts int to ascii
