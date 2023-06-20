@@ -7,5 +7,6 @@
  */
 int main(void)
 {
-    return (0);
+    print_times_table(9);
+	return (0);
 }
