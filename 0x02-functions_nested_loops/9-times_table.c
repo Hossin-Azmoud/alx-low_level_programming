@@ -19,7 +19,7 @@ void times_table(void)
 			fflush(stdout);
 			num1 = first_number * (second_number + 1);
 			num2 = (first_number * (second_number + 1)) % 10;
-			condition1 = (int)(first_number * second_number == (first_number * j) % 10);
+			condition1 = (int)(first_number * second_number == (first_number * second_number) % 10);
 			condition2 = (int)(num1 == num2);
 			condition3 = (int)(second_number != 9);
 
