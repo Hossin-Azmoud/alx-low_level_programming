@@ -23,18 +23,17 @@ void times_table(void)
 			condition2 = (int)(num1 == num2);
 			condition3 = (int)(second_number != 9);
 
-			if (second_number != 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-				continue;
-			}
-
 			if (condition1 && condition2 && condition3)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+			}
+			if (condition3)
+			{
+				_putchar(',');
+				_putchar(' ');
+				continue;
 			}
 		}
 
