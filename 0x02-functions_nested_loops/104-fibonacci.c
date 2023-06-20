@@ -16,7 +16,7 @@ int main(void)
 	{
 		printf("%lu", m);
 
-		if (i < 49)
+		if (i < limit)
 		{
 			n += m;
 			m = n - m;
@@ -25,6 +25,7 @@ int main(void)
 
 		i++;
 	}
+
 	printf("\n");
 	return (0);
 }
