@@ -10,7 +10,7 @@ void print_alphabet_x10()
 
 	while (i < 10)
 	{
-		print_alphabet(void);
+		print_alphabet();
 		i++;
 	}
 }
