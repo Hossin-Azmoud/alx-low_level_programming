@@ -4,7 +4,7 @@
  * main - Entry Point
  * Return: 0 Always (SUCCESS)
  */
-void main(void)
+int main(void)
 {
 	
 	int sum = 0;
@@ -27,4 +27,6 @@ void main(void)
 		_putchar(buff[i]);
 		i++;
 	}
+
+	return (0);
 }
