@@ -1,29 +1,39 @@
 #include <stdio.h>
+/* Mooody */
 
 /**
  * main - Program that prints the first 50 fib numbers.
  * Return: 0 Always (SUCCESS)
  */
-
 int main(void)
 {
-	unsigned long m = 1;
-	unsigned long n = 2;
-	unsigned long limit = 98;
-	unsigned long i = 0;
+	unsigned long int a, b, c, n, m, x, y;
 
-	while (i <= limit)
+	b = 1;
+	c = 2;
+
+	printf("%lu", b);
+
+	for (a = 1; a < 91; a++)
 	{
-		printf("%lu", m);
+		printf(", %lu", c);
+		c = c + b;
+		b = c - b;
+	}
 
-		if (i < limit)
-		{
-			n += m;
-			m = n - m;
-			printf(", ");
-		}
+	n = b / 1000000000;
+	m = b % 1000000000;
+	x = c / 1000000000;
+	y = c % 1000000000;
 
-		i++;
+	for (a = 92; a < 99; ++a)
+	{
+		printf(", %lu", x + (y / 1000000000));
+		printf("%lu", y % 1000000000);
+		x = x + n;
+		n = x - n;
+		y = y + m;
+		m = y - m;
 	}
 
 	printf("\n");
