@@ -28,6 +28,6 @@ int main(void)
 		i++;
 	}
 
-	printf("%i\n", sum);
+	printf("%li\n", sum);
 	return (0);
 }
