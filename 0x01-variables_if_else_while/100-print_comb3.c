@@ -5,7 +5,7 @@
  * function a program that prints all possible
  * combinations of single-digit numbers.
  * Return: 0 Always (SUCCESS)
- * 00 01 02 03
+ *
  */
 
 int main(void)
