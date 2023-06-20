@@ -15,7 +15,7 @@ void times_table(void)
 	{
 		for (second_number = 0; second_number <= 9; second_number++)
 		{
-			printf("%d", first_number * j);
+			printf("%d", first_number * second_number);
 			fflush(stdout);
 			num1 = first_number * (second_number + 1);
 			num2 = (first_number * (second_number + 1)) % 10;
