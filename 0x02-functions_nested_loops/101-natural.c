@@ -1,9 +1,10 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry Point
  * Return: 0 Always (SUCCESS)
  */
+
 int main(void)
 {
 	
@@ -19,14 +20,6 @@ int main(void)
 		}
 		i++;
 	}
-	
-	i = convert_int_to_ascii(sum, buff);
-	
-	while(buff[i])
-	{
-		_putchar(buff[i]);
-		i++;
-	}
-
+	printf("%i\n", sum);
 	return (0);
 }
