@@ -4,7 +4,7 @@
  * Return: void.
  */
 
-void times_table(void);
+void times_table(void)
 {
 	int first_number = 0;
 	int second_number = 0;
