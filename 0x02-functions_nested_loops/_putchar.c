@@ -3,10 +3,10 @@
 /**
 * _putchar - puts char
 * function that prints a character
-* Return: Void
+* Return: 1 written character
 */
 
-void _putchar(void)
+int _putchar(char c)
 {
-	printf("_putchar\n");
+	return (write(1, &c, 1));
 }
