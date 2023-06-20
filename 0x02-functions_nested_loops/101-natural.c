@@ -9,7 +9,6 @@ int main(void)
 {
 	
 	int sum = 0;
-	char buff[MAX];
 	int i = 0;
 	
 	while(i < 1024)
