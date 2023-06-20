@@ -12,5 +12,5 @@ int print_last_digit(int n)
 
 	lst = num % 10;
 	_putchar((num == INT_MIN) ? ('0' - lst) : ('0' + lst));
-	return (lst);
+	return ((num == INT_MIN) ? -lst : lst);
 }
