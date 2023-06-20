@@ -7,19 +7,35 @@
  */
 void print_times_table(int n)
 {
-	int i, j;
+	int i, j, next;
 
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
 		{
+			next = (j + 1) * i;
 			if (j == n)
 			{
 				printf("%i\n", i * j);
 				continue;
 			}
-
-			printf("%i,   ", i * j);
+			if (next < 10)
+			{
+				printf("%i,   ", i * j);
+				continue;
+			}
+			
+			if(next >= 10 && next < 100)
+			{
+				printf("%i,  ", i * j);
+				continue;
+			}
+			
+			if(next >= 100)
+			{
+				printf("%i, ", i * j);
+				continue;
+			}
 		}
 	}
 }
