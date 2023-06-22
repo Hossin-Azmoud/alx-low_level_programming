@@ -36,7 +36,10 @@ int main(void)
 			printf("%i", it);
 		}
 
-		printf(" ");
+		if (it != 100)
+		{
+			printf(" ");
+		}
 		it++;
 	}
 
