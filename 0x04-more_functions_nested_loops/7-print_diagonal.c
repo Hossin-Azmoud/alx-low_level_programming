@@ -7,7 +7,7 @@
 */
 void print_diagonal(int n)
 {
-	
+
 	char c     = '\\';
 	char space = ' ';
 	int space_count = 0;
