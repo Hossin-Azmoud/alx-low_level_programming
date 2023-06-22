@@ -31,15 +31,15 @@ int main(void)
 		if (strlen(string) > 0)
 		{
 			printf("%s", string);
-		} else 
+		} else
 		{
 			printf("%i", it);
 		}
-	
+
 		printf(" ");
 		it++;
 	}
-	
+
 	printf("\n");
 	return (0);
 }
