@@ -18,10 +18,8 @@ void more_numbers(void)
 
 		while (start < limit)
 		{
-		
 			if (start > 9)
 			{
-				
 				buff[0] = (start / 10) % 10 + '0';
 				buff[1] = (start % 10) + '0';
 				buff[2] = '\0';
