@@ -6,20 +6,28 @@
 */
 void more_numbers(void)
 {
-	int start;
-	int it    = 0;
-	int limit = 15;
+	int  start;
+	char buff[3];
+	int  i     = 0;
+	int  it    = 0;
+	int  limit = 15;
 
 	while (it < 10)
 	{
 		start = 0;
+		i = 0;
 		while (start < limit)
 		{
 			if (start > 9)
 			{
-				_putchar(((start / 10) % 10) + '0');
-				_putchar((start % 10) + '0');
-
+				buff[0] = ((start / 10) % 10) + '0';
+				buff[1] = (start % 10) + '0';
+				buff[2] = '\0';
+				
+				while (buff[i] != '\0')
+				{
+					_putchar(buff[i]);
+				}
 			} else
 			{
 				_putchar(start + '0');
