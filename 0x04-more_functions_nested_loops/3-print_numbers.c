@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
-* mul - multiply two integers.
-* @a: number
-* @b: number
-* Return: a and b multiplied result.
+* print_numbers - prints 0 -> 9
+* Return: void
 */
 void print_numbers(void)
 {
