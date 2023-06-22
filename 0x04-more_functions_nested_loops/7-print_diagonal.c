@@ -23,6 +23,7 @@ void print_diagonal(int n)
 		}
 
 		_putchar(c);
+		_putchar('\n');
 		n--;
 		space_count++;
 	}
