@@ -23,7 +23,6 @@ void print_triangle(int size)
 	while (space_count >= 0)
 	{
 		tmp = space_count;
-
 		while (tmp > 0)
 		{
 			_putchar(space);
