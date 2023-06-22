@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
-* mul - multiply two integers.
-* @a: number
-* @b: number
-* Return: a and b multiplied result.
+* print_line - prints a line with _
+* @n: number of _
+* Return: void
 */
 
 void print_line(int n)
 {
 	char c = '_';
 
-	while(n > 0)
+	while (n > 0)
 	{
 		_putchar(c);
 		n--;
