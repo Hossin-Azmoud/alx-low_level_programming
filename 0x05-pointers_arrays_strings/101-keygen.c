@@ -1,4 +1,7 @@
 #include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 /* MOODY */
 /**
  * main - program that generates random valid pwds
