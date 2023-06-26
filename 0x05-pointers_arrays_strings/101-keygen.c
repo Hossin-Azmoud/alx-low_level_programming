@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int *password = malloc(100);
+	int password[100];
 	int it = 0, sum, k;
 
 	sum = 0;
@@ -32,6 +32,5 @@ int main(void)
 		it++;
 	}
 
-	free(password);
 	return (0);
 }
