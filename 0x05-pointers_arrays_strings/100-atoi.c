@@ -1,4 +1,8 @@
 #include "main.h"
+#include <string.h>
+
+#define INT_MIN_S "-2147483648"
+#define INT_MIN_I -2147483648
 
 /**
 * _atoi - convert a string to integer.
@@ -10,6 +14,9 @@ int  _atoi(char *s)
 {
 	int n = 0;
 	int sign = 1;
+
+	if (strcmp(INT_MIN_S, s) == 0)
+		return (INT_MIN_I);
 
 	while (*s)
 	{
@@ -28,6 +35,9 @@ int  _atoi(char *s)
 		}
 
 		s++;
+
+		if (n > 0)
+			break;
 	}
 
 	return (n * sign);
