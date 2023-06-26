@@ -31,7 +31,7 @@ int  _atoi(char *s)
 				n *= 10;
 				n = n + (*s - '0');
 			}
-			
+
 			s++;
 			continue;
 		}
