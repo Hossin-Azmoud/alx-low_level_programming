@@ -31,11 +31,12 @@ int  _atoi(char *s)
 				n *= 10;
 				n = n + (*s - '0');
 			}
-
+			
+			s++;
+			continue;
 		}
 
 		s++;
-
 		if (n > 0)
 			break;
 	}
