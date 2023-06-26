@@ -8,6 +8,10 @@
 int main(void)
 {
 	
-	print_rev("Hello");
+	char s[6] = "hello";
+	
+	rev_string(s);
+
+	printf("reved: %s\n", s);
     return (0);
 }
