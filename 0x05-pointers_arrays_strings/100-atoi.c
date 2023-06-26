@@ -10,13 +10,13 @@ int  _atoi(char *s)
 {
 	int n = 0;
 	int sign = 1;
-	int flag = false;
+	int flag = 0;
 
 	while (*s)
 	{
 		if ((*s >= '0' && *s <= '9') || *s == '-')
 		{
-			flag = true;
+			flag = 1;
 			if (*s == '-')
 			{
 				sign = -sign;
