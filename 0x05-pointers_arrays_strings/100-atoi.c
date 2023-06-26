@@ -10,20 +10,27 @@ int  _atoi(char *s)
 {
 	int n = 0;
 	int sign = 1;
+	int flag = false;
 
 	while (*s)
 	{
 		if ((*s >= '0' && *s <= '9') || *s == '-')
 		{
+			flag = true;
 			if (*s == '-')
+			{
 				sign = -sign;
+			}
 			else
 			{
 				n *= 10;
 				n = n + (*s - '0');
 			}
 		}
+
 		s++;
+		if (flag)
+			break;
 	}
 
 	return (n * sign);
