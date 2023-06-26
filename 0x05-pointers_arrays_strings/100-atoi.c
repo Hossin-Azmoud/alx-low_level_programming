@@ -28,8 +28,8 @@ int  _atoi(char *s)
 			}
 			else
 			{
-				n *= 10;
 				n = n + (*s - '0');
+				n *= 10;
 			}
 
 		}
