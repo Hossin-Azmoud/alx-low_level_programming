@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _puts2 - a function that prints a string but steps one character.
+* puts2 - a function that prints a string but steps one character.
 * @str: pointer to string to be printed.
 * Return: Void
 */
