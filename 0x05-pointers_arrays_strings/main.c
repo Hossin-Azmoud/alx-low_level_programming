@@ -8,6 +8,6 @@
 int main(void)
 {
 	
-	_puts("Hello");
+	print_rev("Hello");
     return (0);
 }
