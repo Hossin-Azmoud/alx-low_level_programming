@@ -9,9 +9,13 @@ int main(void)
 {
 	
 	char *str;
+	int n;
 
-    str = "0123456789";
-    puts_half(str);
+    str = "sapsapskpaksas-120asaspapsapkspak";
     
+	n = _atoi(str);
+	
+	printf("%s => %i\n", str, n);
+
 	return (0);
 }
