@@ -9,6 +9,9 @@ char *cap_string(char *s)
 {
 	char *ptr = s;
 
+	if (s == NULL)
+		return (NULL);
+
 	while (*ptr)
 	{
 		if ((*ptr == '.') || (*ptr == ',') || (*ptr == ';') || (*ptr == '!')
