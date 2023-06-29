@@ -1,20 +1,6 @@
 #include "main.h"
 
 /**
-* _strlen - gets the length of s
-* @s: string buffer that will be processed
-* Return: int length of s.
-*/
-int  _strlen(char *s)
-{
-	int it = 0;
-
-	while (s[it] != '\0')
-		it++;
-
-	return (it);
-}
-/**
 * _strcat - a function that concatinates dest with src strings
 * @src:  the source string
 * @dest: the destination string
@@ -22,7 +8,13 @@ int  _strlen(char *s)
 */
 char *_strcat(char *dest, char *src)
 {
-	char *ptr = dest + _strlen(dest);
+	int ln = 0;
+	char *ptr;
+
+	while (dest[ln])
+		ln++;
+
+	ptr = dest + ln;
 
 	while (*src)
 		*ptr++ = *src++;
