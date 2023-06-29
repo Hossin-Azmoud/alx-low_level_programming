@@ -8,12 +8,12 @@
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	
+
 	while (*ptr)
 	{
 		if ((*ptr == '.') || (*ptr == ',') || (*ptr == ';') || (*ptr == '!')
 		|| (*ptr == '?') || (*ptr == '"') || (*ptr == '(')
-		|| (*ptr == ')') || (*ptr == '{') || (*ptr == '}') 
+		|| (*ptr == ')') || (*ptr == '{') || (*ptr == '}')
 		|| (*ptr == ' ') || (*ptr == '\t') || (*ptr == '\n'))
 		{
 			if (*(ptr + 1) >= 'a' && *(ptr + 1) <= 'z')
