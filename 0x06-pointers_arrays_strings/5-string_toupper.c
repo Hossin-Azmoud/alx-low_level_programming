@@ -5,7 +5,7 @@
 * @s: string
 * Return: pointer to the resulting string
 */
-char *string_toupper(char *s);
+char *string_toupper(char *s)
 {
 	char *ptr = s;
 
