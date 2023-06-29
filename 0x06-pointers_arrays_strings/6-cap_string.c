@@ -8,11 +8,11 @@
 char *cap_string(char *s)
 {
 	char *ptr = s;
-
+	
 	if (s == NULL)
 		return (NULL);
 
-	while (*ptr)
+	while (*ptr != '\0')
 	{
 		if ((*ptr == '.') || (*ptr == ',') || (*ptr == ';') || (*ptr == '!')
 		|| (*ptr == '?') || (*ptr == '"') || (*ptr == '(')
