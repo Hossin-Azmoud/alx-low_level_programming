@@ -15,10 +15,12 @@ char *cap_string(char *s)
 
 	while (*ptr != '\0')
 	{
+		if (ptr == s)
+			if (*ptr >= 'a' && *ptr <= 'z')
+				*ptr = *ptr - 32;
+
 		if (word_reached && *ptr >= 'a' && *ptr <= 'z')
-		{
 			*ptr = *ptr - 32;
-		}
 
 		if ((*ptr == '.') || (*ptr == ',') || (*ptr == ';') || (*ptr == '!')
 		|| (*ptr == '?') || (*ptr == '"') || (*ptr == '(')
