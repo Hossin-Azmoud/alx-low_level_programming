@@ -9,6 +9,7 @@ char *cap_string(char *s)
 {
 	char *ptr = s;
 	int  word_reached = 0;
+
 	if (s == NULL)
 		return (NULL);
 
