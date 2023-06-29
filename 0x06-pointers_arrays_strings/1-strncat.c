@@ -9,12 +9,11 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	
 	char *ptr;
 	int  it = 0;
 	int  ln = 0;
 
-	while(dest[ln])
+	while (dest[ln])
 		ln++;
 
 	ptr = dest + ln;
