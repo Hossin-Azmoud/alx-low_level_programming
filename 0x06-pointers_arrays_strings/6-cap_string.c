@@ -17,7 +17,7 @@ char *cap_string(char *s)
 	{
 		if (word_reached && *ptr >= 'a' && *ptr <= 'z')
 		{
-			*ptr -= 32;
+			*ptr = *ptr - 32;
 		}
 
 		if ((*ptr == '.') || (*ptr == ',') || (*ptr == ';') || (*ptr == '!')
