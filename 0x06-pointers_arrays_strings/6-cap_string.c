@@ -8,22 +8,27 @@
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	
+	int  word_reached = 0;
 	if (s == NULL)
 		return (NULL);
 
 	while (*ptr != '\0')
 	{
+		if (word_reached && *ptr >= 'a' && *ptr <= 'z')
+		{
+			*ptr -= 32;
+		}
+
 		if ((*ptr == '.') || (*ptr == ',') || (*ptr == ';') || (*ptr == '!')
 		|| (*ptr == '?') || (*ptr == '"') || (*ptr == '(')
 		|| (*ptr == ')') || (*ptr == '{') || (*ptr == '}')
 		|| (*ptr == ' ') || (*ptr == '\t') || (*ptr == '\n'))
 		{
-			if (*(ptr + 1) >= 'a' && *(ptr + 1) <= 'z')
-			{
-				ptr++;
-				*ptr -= 32;
-			}
+			word_reached = 1;
+		}
+		else
+		{
+			word_reached = 0;
 		}
 
 		ptr++;
