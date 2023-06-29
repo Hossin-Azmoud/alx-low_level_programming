@@ -18,8 +18,11 @@ int _strcmp(char *s1, char *s2)
 		it++;
 	}
 
-	if (s1[it] == '\0' && s2[it] == '\0')
-		return (1);
+	if (s1[it] == '\0' && s2[it])
+		return (-15);
+
+	if (s1[it] && s2[it] == '\0')
+		return (15);
 
 	return (0);
 }
