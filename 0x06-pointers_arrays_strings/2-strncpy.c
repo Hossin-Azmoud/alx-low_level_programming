@@ -7,7 +7,7 @@
 * @dest: destincation string
 * Return: char * result of copy operation
 */
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)
 {
 	char *ptr = dest;
 
