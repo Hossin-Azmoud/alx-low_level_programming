@@ -2,7 +2,7 @@
 
 /* MOODY */
 /**
-* print_chessboard - function that prints the sum of the two diagonals
+* print_diagsums - function that prints the sum of the two diagonals
 * of a square matrix of integers.
 * @a: Array
 * @size: size of the array
