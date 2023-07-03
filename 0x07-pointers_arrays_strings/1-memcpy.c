@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _memset -  function that copies memory area.
+* _memcpy -  function that copies memory area.
 * @dest: memory address to copy to
 * @src: memory address to copy from
 * @n: the amount of slots that will be copied over
@@ -16,6 +16,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		dest[it] = src[it];
 		it++;
 	}
-	
+
 	return (dest);
 }
