@@ -18,6 +18,9 @@ char *_strchr(char *s, char c)
 
 		ptr++;
 	}
+	
+	if (ptr == c)
+		return ptr;
 
 	return (NULL);
 }
