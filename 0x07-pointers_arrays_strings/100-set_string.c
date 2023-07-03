@@ -2,7 +2,7 @@
 
 /* MOODY */
 /**
-* print_diagsums - function that sets the value of a pointer to a char.
+* set_string - function that sets the value of a pointer to a char.
 * @s: double pointer to the string to be set
 * @to: pointer to string to be set to.
 * Return: void
