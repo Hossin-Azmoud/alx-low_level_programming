@@ -6,7 +6,6 @@
 * @s2: string to be processed
 * Return: int length of s
 */
-cc ; *c
 int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
