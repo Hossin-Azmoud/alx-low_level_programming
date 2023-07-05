@@ -2,6 +2,6 @@
 
 int main()
 {
-	_puts_recursion("Hello world!");
+	_print_rev_recursion("Hello world!");
 	return 0;
 }
