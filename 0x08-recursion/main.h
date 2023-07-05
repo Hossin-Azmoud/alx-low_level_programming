@@ -12,5 +12,6 @@ int  _find_sqrt(int n, int i);
 int  is_prime_number(int n);
 int  _is_p(int n, int i);
 int  is_palindrome(char *s);
+int check_palindrome(char *s, int left, int right);
 
 #endif /* MAIN_H */
