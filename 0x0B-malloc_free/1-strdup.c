@@ -8,28 +8,25 @@
 
 char *_strdup(char *str)
 {
-	int  it = 0;
+	int  it = 0, len = 0;
 	char *new_;
 
 	if (str == NULL)
 		return (NULL);
 
-	while (str[it] != '\0')
-		it++;
+	while (str[len] != '\0') len++;
 
-	new_ = (char *) malloc(it + 1);
+	new_ = (char *) malloc(len + 1);
 
 	if (new_ == NULL)
 		return (NULL);
 
-	new_[it] = '\0';
-	it--;
-
-	while (it > 0)
+	while (it < len)
 	{
 		new_[it] = str[it];
-		it--;
+		it++;
 	}
 
+	new_[it] = '\0';
 	return (new_);
 }
