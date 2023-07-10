@@ -10,7 +10,7 @@ int _strlen(char *s)
 	int ln = 0;
 
 	if (s == NULL)
-		return ln;
+		return (ln);
 
 	while (s[ln] != '\0')
 		ln++;
@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 	int  it;
 
 	if (s1 == NULL && s2 == NULL)
-		return "\0";
+		return ("\0");
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
