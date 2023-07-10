@@ -7,8 +7,8 @@
 */
 int _strlen(char *s)
 {
-	int ln = 0;
 
+	int ln = 0;
 	if (s == NULL)
 		return (ln);
 
@@ -24,7 +24,6 @@ int _strlen(char *s)
 * @s2: string that will be concatenated
 * Return: (char *) pointer to the string that concatenates s1, s2
 */
-
 char *str_concat(char *s1, char *s2)
 {
 	char *new;
@@ -41,6 +40,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (new == NULL)
 		return (NULL);
+
 	it = 0;
 
 	while (it < len1)
