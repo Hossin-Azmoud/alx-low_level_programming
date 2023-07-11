@@ -10,5 +10,6 @@ char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
 int  _strlen(char *s);
 char *argstostr(int ac, char **av);
+char **strtow(char *str);
 
 #endif /* MAIN_H */
