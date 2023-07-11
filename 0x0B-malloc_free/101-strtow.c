@@ -32,14 +32,13 @@ char **strtow(char *str)
 	int it     = 0;
 	int row    = 0;
 	int col    = 0;
-	
-	
+
 	if (str == NULL)
 		return (NULL);
 
 	while (*str == ' ')
 		str++;
-	
+
 	if (*str == '\0')
 		return (NULL);
 
@@ -60,5 +59,5 @@ char **strtow(char *str)
 	}
 
 	out[row] = NULL;
-	return out;
+	return (out);
 }
