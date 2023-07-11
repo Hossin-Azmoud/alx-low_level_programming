@@ -67,7 +67,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 		return (_strdup(s2));
-	
+
 	if (s2 == NULL)
 		return (_strdup(s1));
 
