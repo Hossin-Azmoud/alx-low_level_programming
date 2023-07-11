@@ -7,8 +7,8 @@
 */
 int _strlen(char *s)
 {
-
 	int ln = 0;
+
 	if (s == NULL)
 		return (ln);
 
@@ -42,17 +42,22 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	it = 0;
-
-	while (it < len1)
+	if (s1 != NULL)
 	{
-		new[it] = s1[it];
-		it++;
+		while (it < len1)
+		{
+			new[it] = s1[it];
+			it++;
+		}
 	}
 
-	while (it - len1 < len2)
+	if (s2 != NULL)
 	{
-		new[it] = s2[it - len1];
-		it++;
+		while (it - len1 < len2)
+		{
+			new[it] = s2[it - len1];
+			it++;
+		}
 	}
 
 	return (new);
