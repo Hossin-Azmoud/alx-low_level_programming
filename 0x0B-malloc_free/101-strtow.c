@@ -43,14 +43,14 @@ char **strtow(char *str)
 	if (*str == '\0')
 		return (NULL);
 
-	for (it = 0; str[it]; it++)
+	for (it = 0; str[it] != '\0'; it++)
 	{
 		out[row] = (char *) malloc(sizeof(char) * len);
 
 		if (out[row] == NULL)
 			return (NULL);
 		
-		for (col = 0; (str[it] != ' ' && str[it]); it++, col++)
+		for (col = 0; (str[it] != ' ' && str[it] != '\0'); it++, col++)
 		{
 			out[row][col] = str[it];
 		}
