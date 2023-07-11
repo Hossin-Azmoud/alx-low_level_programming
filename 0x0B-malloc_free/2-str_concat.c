@@ -1,6 +1,37 @@
 #include "main.h"
 
 /**
+* _strdup - function that duplicates a string.
+* @str: the string that will be duplicated.
+* Return: (char *) duplicated string.
+*/
+
+char *_strdup(char *str)
+{
+	int  it = 0, len = 0;
+	char *new_;
+
+	if (str == NULL)
+		return (NULL);
+
+	while (str[len] != '\0')
+		len++;
+
+	new_ = (char *) malloc(len + 1);
+
+	if (new_ == NULL)
+		return (NULL);
+
+	while (it < len)
+	{
+		new_[it] = str[it];
+		it++;
+	}
+
+	new_[it] = '\0';
+	return (new_);
+}
+/**
 * _strlen - function that calcs the length of a string.
 * @s: string that will be concatenated
 * Return: (int) length of s
@@ -34,6 +65,12 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 		return ("\0");
 
+	if (s1 == NULL)
+		return (_strdup(s2));
+	
+	if (s2 == NULL)
+		return (_strdup(s1));
+
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	new  = (char *) malloc(len1 + len2 + 1);
@@ -42,22 +79,17 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	it = 0;
-	if (s1 != NULL)
+
+	while (it < len1)
 	{
-		while (it < len1)
-		{
-			new[it] = s1[it];
-			it++;
-		}
+		new[it] = s1[it];
+		it++;
 	}
 
-	if (s2 != NULL)
+	while (it - len1 < len2)
 	{
-		while (it - len1 < len2)
-		{
-			new[it] = s2[it - len1];
-			it++;
-		}
+		new[it] = s2[it - len1];
+		it++;
 	}
 
 	return (new);
