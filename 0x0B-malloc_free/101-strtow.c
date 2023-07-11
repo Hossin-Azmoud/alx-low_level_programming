@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#define MAX 1024
+#define MAX 512
 
 /**
 * _strlen - function that calcs the length of a string.
@@ -49,19 +49,16 @@ char **strtow(char *str)
 
 		if (out[row] == NULL)
 			return (NULL);
-		
+
 		for (col = 0; (str[it] != ' ' && str[it] != '\0'); it++, col++)
-		{
 			out[row][col] = str[it];
-		}
-		
+
 		out[row][col] = '\0';
 
 		if (col > 0)
 			row++;
 	}
-	
+
 	out[row] = NULL;
 	return out;
 }
-
