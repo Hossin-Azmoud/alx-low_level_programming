@@ -4,6 +4,7 @@
 * string_nconcat - function that concats two strings.
 * @s1: first string.
 * @s2: second string.
+* @n: amount of bytes to be taken from s2
 * Return: concated string.
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -19,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s2 == NULL)
 		s2 = "";
-	
+
 	l1 = strlen(s1);
 	l2 = strlen(s2);
 
@@ -27,12 +28,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		all_len = l1 + l2;
 	else
 		all_len = l1 + n;
-	
+
 	new_ = (char *) malloc(all_len + 1);
 
 	if (new_ == NULL)
-		return NULL;
-	
+		return (NULL);
+
 	/* adding the first string. */
 	for (; iter < l1; ++iter)
 		new_[iter] = s1[iter];
@@ -43,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	new_[all_len] = 0;
 
-	return new_;
+	return (new_);
 }
 
 
