@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (; iter < l1; ++iter)
 		new_[iter] = s1[iter];
 
-	/* adding the first string. */
+	/* adding the second string. */
 	for (iter = 0; (iter + l1) < all_len; ++iter)
 		new_[iter + l1] = s2[iter];
 
