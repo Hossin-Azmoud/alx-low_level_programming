@@ -7,7 +7,7 @@
 * @owner: pwner of the dog.
 * Return: (new_dog_) a pointer to the new created dog.
 */
-dog_t *new_dog(char *name, float age, char *owner);
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog_ = (dog_t *)malloc(sizeof(dog_t));
 
