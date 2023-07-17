@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * dog_t - a struct that represents a dog.
+ * struct dog_t - a struct that represents a dog.
  * @name: the name of the dawg.
  * @age: the age of the dawg.
  * @owner: the name of the owner of the dawg.
