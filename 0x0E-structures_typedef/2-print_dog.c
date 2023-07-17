@@ -5,7 +5,7 @@
 * @d: pointer to the struct that will be initialized
 * Return: void
 */
-void print_dog(struct dog *d)
+void print_dog(dog_t *d)
 {
 	if (d == NULL)
 		return;
