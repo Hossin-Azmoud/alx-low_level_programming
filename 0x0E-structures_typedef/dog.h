@@ -3,20 +3,20 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-typedef struct dog_t dog;
+
 /**
- * struct dog - a struct that represents a dog.
+ * dog_t - a struct that represents a dog.
  * @name: the name of the dawg.
  * @age: the age of the dawg.
  * @owner: the name of the owner of the dawg.
  */
-struct dog
+typedef struct dog_t
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog_t;
 
-void print_dog(struct dog *d);
-void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(dog_t *d);
+void init_dog(dog_t *d, char *name, float age, char *owner);
 #endif /* DOG_H */
