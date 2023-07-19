@@ -19,7 +19,8 @@ int main(int argc, char **argv)
 
 	if (argc < 4)
 	{
-		return (1);
+		printf("Error\n");
+		exit(98);
 	}
 
 	a  = atoi(argv[1]);
@@ -30,7 +31,13 @@ int main(int argc, char **argv)
 	if (func == NULL)
 	{
 		printf("Error\n");
-		return (1);
+		exit(99);
+	}
+
+	if (b == 0 && (strcmp(op, "%") == 0) || (strcmp(op, "*") == 0))
+	{
+		printf("Error\n");
+		exit(100);
 	}
 
 	printf("%i\n", func(a, b));
