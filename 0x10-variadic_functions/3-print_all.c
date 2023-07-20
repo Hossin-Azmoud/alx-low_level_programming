@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				printf("%s%d", sep, va_arg(arg_list_, int));
 			} break;
 			default: {
-
+				idx++;
 			} break;
 		}
 
