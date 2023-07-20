@@ -8,9 +8,10 @@
 *
 */
 
-void print_strings(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list arg_list_;
+	char *curr;
 	unsigned int idx;
 
 	va_start(arg_list_, n);
@@ -18,7 +19,8 @@ void print_strings(const char *separator, const unsigned int n, ...);
 
 	while (idx < n)
 	{
-		printf("%s", va_arg(arg_list_, char*));
+		curr = va_arg(arg_list_, char*);
+		printf("%s",  (curr != NULL) ? curr : "(nil)");
 
 		if (idx < n - 1)
 			printf("%s", (separator != NULL) ? separator : "");
