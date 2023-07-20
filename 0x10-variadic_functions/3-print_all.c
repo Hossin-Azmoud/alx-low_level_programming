@@ -11,11 +11,12 @@ void print_all(const char * const format, ...)
 	char *sep, *s, char_token;
 	int idx = 0;
 
-	sep = ", ", char_token = *(format + idx);
+	sep = ", ";
 	va_start(arg_list_, format);
 
 	while (char_token)
 	{
+		char_token = *(format + idx);
 		if (!*(format + idx + 1))
 			sep = "";
 
@@ -43,9 +44,7 @@ void print_all(const char * const format, ...)
 		}
 
 		idx++;
-		char_token = *(format + idx);
 	}
-
 	printf("\n");
 	va_end(arg_list_);
 }
