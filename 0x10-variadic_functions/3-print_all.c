@@ -4,17 +4,15 @@
 * print_all - a function that prints anything
 * @format: the format.
 * Return: void
-*
 */
-
 void print_all(const char * const format, ...)
 {
 	va_list arg_list_;
 	void *curr;
 	char internal_fmt[3], *nil_fmt = "(%s)", *nil = "nil";
-	int idx = 0;
+	int  idx = 0, printed = 0;
 	char char_token = *(format + idx);
-
+	
 	va_start(arg_list_, format);
 	internal_fmt[0] = '%';
 	internal_fmt[2] = 0;
@@ -34,14 +32,17 @@ void print_all(const char * const format, ...)
 				(curr != NULL) ? (internal_fmt) : nil_fmt,
 				(curr != NULL) ? curr : nil
 			);
+			printed = 1;
 		}
 
 		idx++;
 		char_token = *(format + idx);
 
-		if (char_token)
+		if (printed && char_token)
+		{
 			printf(", ");
-
+			printed = 0;
+		}
 	}
 
 	printf("\n");
