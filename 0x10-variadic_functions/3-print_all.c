@@ -8,7 +8,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list arg_list_;
-	char *sep, *s, char_token;
+	char *sep, *s, char_token = '1';
 	int idx = 0;
 
 	sep = ", ";
@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	{
 		char_token = *(format + idx);
 		if (!*(format + idx + 1))
-			sep = "";
+			sep = "\n";
 
 		switch (char_token)
 		{
@@ -45,6 +45,6 @@ void print_all(const char * const format, ...)
 
 		idx++;
 	}
-	printf("\n");
+
 	va_end(arg_list_);
 }
