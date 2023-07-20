@@ -18,6 +18,7 @@ void print_all(const char * const format, ...)
 	{
 		if (!*(format + idx + 1))
 			sep = "";
+
 		switch (char_token)
 		{
 			case 'c': {
@@ -29,7 +30,7 @@ void print_all(const char * const format, ...)
 			case 's': {
 				s = va_arg(arg_list_, char*);
 
-				if (!s)
+				if (s == NULL)
 					s = "(nil)";
 
 				printf("%s%s", s, sep);
