@@ -10,16 +10,15 @@ void print_all(const char * const format, ...)
 	va_list arg_list_;
 	char *sep, *s, char_token = '1';
 	int idx = 0;
+	int len = strlen(format);
 
 	sep = ", ";
 	va_start(arg_list_, format);
-
-	while (char_token)
+	while (char_token && idx < len)
 	{
 		char_token = *(format + idx);
-		if (!*(format + idx + 1))
-			sep = "\n";
-
+		if (*(format + idx + 1) == 0)
+			sep = "";
 		switch (char_token)
 		{
 			case 'c': {
@@ -30,7 +29,6 @@ void print_all(const char * const format, ...)
 			} break;
 			case 's': {
 				s = va_arg(arg_list_, char*);
-
 				if (s == NULL)
 					s = "(nil)";
 
@@ -42,9 +40,9 @@ void print_all(const char * const format, ...)
 			default: {
 			} break;
 		}
-
 		idx++;
 	}
 
+	printf("\n");
 	va_end(arg_list_);
 }
