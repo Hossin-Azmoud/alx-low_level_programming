@@ -14,6 +14,7 @@ void print_all(const char * const format, ...)
 
 	sep = "";
 	va_start(arg_list_, format);
+	char_token = format[idx];
 
 	while (char_token && format)
 	{
