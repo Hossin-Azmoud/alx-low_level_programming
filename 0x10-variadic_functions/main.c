@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	print_all("sic", NULL, 0, 'A');
+	print_all("sick", NULL, 0, 'A');
 	return (0);
 }

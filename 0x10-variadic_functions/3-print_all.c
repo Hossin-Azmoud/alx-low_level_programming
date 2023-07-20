@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 
+
 /**
 * print_all - a function that prints anything
 * @format: the format.
@@ -10,36 +11,36 @@ void print_all(const char * const format, ...)
 	va_list arg_list_;
 	char *sep, *s, char_token = '1';
 	int idx = 0;
-	int len = strlen(format);
 
-	sep = ", ";
+	sep = "";
 	va_start(arg_list_, format);
-	while (char_token && idx < len)
+
+	while (char_token && format)
 	{
-		char_token = *(format + idx);
-		if (*(format + idx + 1) == 0)
-			sep = "";
+		char_token = format[idx];
 		switch (char_token)
 		{
 			case 'c': {
-				printf("%c%s", va_arg(arg_list_, int), sep);
+				printf("%s%c", sep, va_arg(arg_list_, int));
 			} break;
 			case 'f': {
-				printf("%f%s", va_arg(arg_list_, double), sep);
+				printf("%s%f", sep, va_arg(arg_list_, double));
 			} break;
 			case 's': {
 				s = va_arg(arg_list_, char*);
 				if (s == NULL)
 					s = "(nil)";
-
-				printf("%s%s", s, sep);
+				printf("%s%s", sep, s);
 			} break;
 			case 'i': {
-				printf("%i%s", va_arg(arg_list_, int), sep);
+				printf("%s%i", sep, va_arg(arg_list_, int));
 			} break;
 			default: {
+
 			} break;
 		}
+
+		sep = ", ";
 		idx++;
 	}
 
