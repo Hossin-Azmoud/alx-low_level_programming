@@ -8,41 +8,41 @@
 void print_all(const char * const format, ...)
 {
 	va_list arg_list_;
-	void *curr;
-	char internal_fmt[3], *nil_fmt = "(%s)", *nil = "nil";
-	int  idx = 0, printed = 0;
-	char char_token = *(format + idx);
-	
-	va_start(arg_list_, format);
-	internal_fmt[0] = '%';
-	internal_fmt[2] = 0;
+	char *sep, *s, char_token;
+	int idx = 0;
 
+	sep = ", ", char_token = *(format + idx);
+	va_start(arg_list_, format);
 	while (char_token)
 	{
-		if (char_token == 'c'
-		|| char_token == 'f'
-		|| char_token == 'i'
-		|| char_token == 's'
-		)
+		switch (char_token)
 		{
-			curr            = va_arg(arg_list_, void*);
-			internal_fmt[1] = char_token;
+			case 'c': {
+				printf("%c%s", va_arg(arg_list_, int), sep);
+			} break;
+			case 'f': {
+				printf("%f%s", va_arg(arg_list_, double), sep);
+			} break;
+			case 's': {
+				s = va_arg(arg_list_, char*);
 
-			printf(
-				(curr != NULL) ? (internal_fmt) : nil_fmt,
-				(curr != NULL) ? curr : nil
-			);
-			printed = 1;
+				if (!s)
+					s = "(nil)";
+
+				printf("%s%s", s, sep);
+			} break;
+			case 'i': {
+				printf("%i%s", va_arg(arg_list_, int), sep);
+			} break;
+			default: {
+			} break;
 		}
 
 		idx++;
 		char_token = *(format + idx);
 
-		if (printed && char_token)
-		{
-			printf(", ");
-			printed = 0;
-		}
+		if (!*(format + idx + 1))
+			sep = "";
 	}
 
 	printf("\n");
