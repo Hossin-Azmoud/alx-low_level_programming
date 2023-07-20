@@ -13,8 +13,12 @@ void print_all(const char * const format, ...)
 
 	sep = ", ", char_token = *(format + idx);
 	va_start(arg_list_, format);
+
 	while (char_token)
 	{
+		if (!*(format + idx + 1))
+			sep = "";
+
 		switch (char_token)
 		{
 			case 'c': {
@@ -39,10 +43,7 @@ void print_all(const char * const format, ...)
 		}
 
 		idx++;
-		char_token = *(format + idx);
-
-		if (!*(format + idx + 1))
-			sep = "";
+		char_token = *(format + idx);	
 	}
 
 	printf("\n");
