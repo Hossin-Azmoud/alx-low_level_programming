@@ -18,7 +18,6 @@ void print_all(const char * const format, ...)
 	{
 		if (!*(format + idx + 1))
 			sep = "";
-
 		switch (char_token)
 		{
 			case 'c': {
@@ -43,7 +42,7 @@ void print_all(const char * const format, ...)
 		}
 
 		idx++;
-		char_token = *(format + idx);	
+		char_token = *(format + idx);
 	}
 
 	printf("\n");
