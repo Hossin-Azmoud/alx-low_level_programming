@@ -24,6 +24,6 @@ int    _putchar(char c);
 int    _puts(char *buff);
 list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
-unsigned int _strlen(char *s);
+unsigned int _strlen(const char *s);
 
 #endif /* LIST_H */

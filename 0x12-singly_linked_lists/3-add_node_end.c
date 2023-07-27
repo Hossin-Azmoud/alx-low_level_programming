@@ -4,7 +4,7 @@
  * @s: String.
  * Return: len of s
  */
-unsigned int _strlen(char *s)
+unsigned int _strlen(const char *s)
 {
 	unsigned int idx = 0;
 
