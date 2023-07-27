@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
 * list_len - function that returns the num of elements in a list_t
 * @h: list_t structure.
