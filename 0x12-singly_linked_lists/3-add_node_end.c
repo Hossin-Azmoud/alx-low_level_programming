@@ -11,7 +11,7 @@ unsigned int _strlen(char *s)
 	if (s == NULL)
 		return (idx);
 
-	while (s[idx]!= 0)
+	while (s[idx] != 0)
 		idx++;
 
 	return (idx);
