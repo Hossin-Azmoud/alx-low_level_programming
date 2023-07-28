@@ -1,0 +1,2 @@
+INT A
+INT 2
