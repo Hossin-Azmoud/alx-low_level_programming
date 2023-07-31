@@ -6,13 +6,13 @@
 */
 size_t listint_len(const listint_t *h)
 {
-	size_t sz;
+	size_t sz = 0;
 
 	if (h == NULL)
 		return (sz);
 
 	sz++;
-	if (h->next)
+	if (h->next != NULL)
 		sz += listint_len(h->next);
 
 	return (sz);
