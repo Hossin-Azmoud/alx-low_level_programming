@@ -1,11 +1,8 @@
 #include "lists.h"
 /**
  * sum_listint - sums all elements
- *
  * @head: head of the linked list.
- *
  * Return: sum of all elements
- * 0 if head is NULL
  */
 int sum_listint(listint_t *head)
 {
