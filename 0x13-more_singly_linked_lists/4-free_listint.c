@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
 * free_listint - a function that frees the list.
 * @head: a pointer to the head of the list that will be freed.
