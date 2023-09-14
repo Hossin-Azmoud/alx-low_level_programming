@@ -26,17 +26,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		at_index = at_index->next;
 		i--;
 	}
-	
+
 	if (!at_index)
 	{
 		free(new);
 		return (NULL);
 	}
-	
-	printf("valid %p %i\n", (void*)at_index, (i));
+
 	new->next       = at_index;
 	new->prev       = at_index->prev;
 	new->prev->next = new;
 	at_index->prev  = new;
+
 	return (new);
 }
